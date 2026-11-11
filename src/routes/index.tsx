@@ -84,10 +84,13 @@ function Home() {
         </div>
       </section>
 
-      <div className="overflow-hidden border-y border-line bg-paper">
-        <div className="ticker flex w-max gap-10 py-3">
-          {[...ticker, ...ticker].map((item, i) => (
-            <span key={`${item}-${i}`} className="text-xs font-semibold tracking-widest uppercase">
+      <div className="border-y border-line bg-paper">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 py-3 sm:gap-x-6">
+          {ticker.map((item) => (
+            <span
+              key={item}
+              className="text-[11px] leading-none font-semibold tracking-wide uppercase sm:text-xs"
+            >
               {item}
             </span>
           ))}
